@@ -13,15 +13,30 @@ body{
     flex-direction:column;
     align-items: center;
     justify-content: center;
-    background-image:url('../Profile-Card-Component/images/bg-pattern-top.svg');
-    background-image:url('../Profile-Card-Component/images/bg-pattern-bottom.svg');
+    background-color: #19a2ae;
 }
+
+body::before{
+    content:url(./images/bg-pattern-bottom.svg);
+    position:fixed;
+    bottom:-50%;
+    left:50%;
+    z-index:0;
+}
+body::after{
+    content:url(./images/bg-pattern-top.svg);
+    position:fixed;
+    top:-50%;
+    right:50%;
+}
+
 .container{
 background-color: white;
 width:20rem;
 height:min-content;
 border-radius:1rem;
 text-align:center;
+z-index:1;
 }
 
 .cover-img{
@@ -88,4 +103,6 @@ li{
 footer{
     position:fixed;
     bottom:10px;
+    color:white;
 }
+
